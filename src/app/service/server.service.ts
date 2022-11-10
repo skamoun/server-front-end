@@ -13,7 +13,7 @@ export class ServerService {
   
   private readonly apiUrl='http://localhost:8080';
   constructor(private http:HttpClient) { }
-    servers$=<Observable<CustomResponse>>this.http.get<CustomResponse>('${this.apiUrl}/server/list').pipe(
+    servers$=<Observable<CustomResponse>>this.http.get<CustomResponse>(`${this.apiUrl}/server/list`).pipe(
      tap(console.log),
      catchError(this.handleError) 
     );
