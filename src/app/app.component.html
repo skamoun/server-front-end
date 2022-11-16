@@ -1,7 +1,12 @@
-<div class="ibox float-e-margins">
-  <div class="ibox-title">
-    <h5>Manage servers</h5>
-    <div class="ibox-tools">
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+  <div class="table-title">
+    <div class="row">
+      <div class="col-sm-6">
+    <h2>Manage servers</h2>
+  </div>
+    <div class="col-sm-6">
        
         <button type="button" class=" btn btn-primary"> print report</button>
        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
@@ -9,7 +14,7 @@
         <span>New Server</span>
        </a>
        <span>
-        <select class="btn btn-info" style="height: 32.91px;">
+        <select name="status" class="btn btn-info" style="height: 32.91px;">
           <option value="ALL">ALL
           </option>
           <option value="SERVER_UP">SERVER_UP
@@ -20,14 +25,21 @@
       </select>
        </span>
     </div>
+  </div>
 </div>
-<div class="ibox-content" style="display:block;">
-  <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline">
-    <div class="clear"></div>
+<br>
+
  <ng-container>
- <ng-container></ng-container>
  <ng-container>
-<table class="table table-striped table-bordered table-hover dataTables-example dataTable dtr-inline" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+  <div class="col-md-12 single-note-item text-center">
+    <div class="spinner-border text-info" role="status">
+
+    </div>
+
+  </div>
+ </ng-container>
+ <ng-container>
+<table class="table table-striped table-bordered table-hover" id="servers">
 <thead>
   <tr>
     <th> image</th>
@@ -41,17 +53,31 @@
   </tr>
 </thead>
 <tbody>
-  <tr class="gradeA odd" role="row">
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+  
+    <td>image</td>
+    <td>>ip address</td>
+    <td>name</td>
+    <td>memory</td>
+    <td>type</td>
+    <td>
+      <span class="badge"></span>
+    </td>
+    <td>
+      <a style="cursor : pointer;">
+      <i class="material-icons" title="ping server"> &#xe328;</i>
+      <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+      </a>
+    </td>
+    <td>
+      <a class="delete" data-toggle="modal"
+      style="cursor : pointer;">
+      <i class="material-econs" data-toggle="modal" title="Delete">&#xE872;</i>
 
-  </tr>
+
+      </a>
+    </td>
+
+
 </tbody>
 </table>
 
@@ -62,9 +88,12 @@
   </div>
  </ng-container>
  </ng-container>
+
 </div>
 </div>
 </div>
+
+
 <div id="addEmployeeModal" class="modal-fade">
 
 </div>
